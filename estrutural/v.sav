@@ -1,0 +1,64 @@
+[*]
+[*] GTKWave Analyzer v3.3.66 (w)1999-2015 BSI
+[*] Mon Mar 19 23:42:34 2018
+[*]
+[dumpfile] "/home/bcc/rrs17/Matérias/terceiroSemestre/projetos/VHDL-projetos/estrutural/v_estrut.vcd"
+[dumpfile_mtime] "Mon Mar 19 23:37:45 2018"
+[dumpfile_size] 41045
+[savefile] "/home/bcc/rrs17/Matérias/terceiroSemestre/projetos/VHDL-projetos/estrutural/v.sav"
+[timestart] 0
+[size] 1344 601
+[pos] -1 -1
+*-17.000000 265400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] u_mux2.
+[sst_width] 210
+[signals_width] 228
+[sst_expanded] 1
+[sst_vpaned_height] 156
+@28
+s[2:0]
+s0
+s1
+s2
+@200
+-
+@28
+[color] 2
+esperadamux
+entr_2[1:0]
+[color] 5
+saidamux2
+entr_4[3:0]
+[color] 6
+saidamux4
+entr_8[7:0]
+[color] 7
+saidamux8
+@200
+-
+@28
+inp
+[color] 2
+esperadademux_2[1:0]
+sdemux2[1:0]
+[color] 1
+esperadademux_4[3:0]
+sdemux4[3:0]
+[color] 3
+esperadademux_8[7:0]
+sdemux8[7:0]
+@200
+-
+@29
+[color] 2
+esperadadecod_2[1:0]
+@28
+sdecod2[1:0]
+[color] 1
+esperadadecod_4[3:0]
+sdecod4[3:0]
+[color] 3
+esperadadecod_8[7:0]
+sdecod8[7:0]
+[pattern_trace] 1
+[pattern_trace] 0

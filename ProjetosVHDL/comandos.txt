@@ -1,0 +1,15 @@
+ghdl -s ha.vhdl   #checar sintaxe do programa
+
+ghdl -s ha_tb.vhdl #checar sintaxe do test bench
+
+ghdl -a ha.vhdl #analise programa
+
+ghdl -a ha_tb.vhdl #analise test bench
+
+ghdl -e ha_tb #elaboração
+
+ghdl -r ha_tb #rodar programa
+
+ghdl -r ha_tb --vcd=ha.vcd #rodar programa com ondas
+
+gtkwave ha.vcd & #analisar ondas
