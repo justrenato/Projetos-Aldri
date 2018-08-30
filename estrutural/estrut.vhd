@@ -21,9 +21,9 @@ architecture estrut of mux2 is
     port(A : in bit; S : out bit);
   end component inv;
 
-  component nand2 is
+  component and2 is
     port(A,B : in bit; S : out bit);
-  end component nand2;
+  end component and2;
 
   -- sinais internos
   signal r, p, q : bit;              
@@ -31,10 +31,10 @@ architecture estrut of mux2 is
   -- compare ligacoes dos sinais com diagrama das portas logicas
   begin  
 
-    Ui:  inv   port map(s, r);
-    Ua0: nand2 port map(a, r, p);
-    Ua1: nand2 port map(b, s, q);
-    Uor: nand2 port map(p, q, z);
+    inv0:  inv   port map(s, r);
+    and0: and2 port map(a, r, p);
+    and1: and2 port map(b, s, q);
+    or0: and2 port map(p, q, z);
     
 end architecture estrut;
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
