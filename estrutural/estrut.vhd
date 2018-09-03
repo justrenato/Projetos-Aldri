@@ -25,20 +25,22 @@ architecture estrut of mux2 is
     port(A,B : in bit; S : out bit);
   end component and2;
 
+  component or2 is
+    port(A,B : in bit; S : out bit);
+  end component or2;
+
   -- sinais internos
   signal r, p, q : bit;              
   
   -- compare ligacoes dos sinais com diagrama das portas logicas
   begin  
 
-    inv0:  inv   port map(s, r);
-    and0: and2 port map(a, r, p);
-    and1: and2 port map(b, s, q);
-    or0: and2 port map(p, q, z);
+    Uinv0: inv  port map(s, r);
+    Uand0: and2 port map(a, r, p);
+    Uand1: and2 port map(b, s, q);
+    Uor0:  or2  port map(p, q, z);
     
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- mux4(a,b,c,d,s0,s1,z)
@@ -57,18 +59,16 @@ architecture estrut of mux4 is
     port(A,B : in  bit; S : in  bit; Z : out bit);
   end component mux2;
 
-  signal p,q,r : bit;                   -- sinais internos
+  signal p,q: bit;                   -- sinais internos
 begin
   
-  Um1: mux2 port map (a, b, s0, p); 
-  Um2: mux2 port map (c, d, s0, q);
-  Um3: mux2 port map (p, q, s1, z);
+  Umux1: mux2 port map (a, b, s0, p); 
+  Umux2: mux2 port map (c, d, s0, q);
+  Umux3: mux2 port map (p, q, s1, z);
 
     -- implemente usando tres mux2
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- mux8(a,b,c,d,e,f,g,h,s0,s1,s2,z)
@@ -91,13 +91,13 @@ architecture estrut of mux8 is
     port(A,B,C,D : in  bit; S0,S1 : in  bit; Z : out bit);
   end component mux4;
 
-  signal p,q,r : bit;                   -- sinais internos
+  signal p,q : bit;                   -- sinais internos
   
 begin
   
-  Um1: mux4 port map (a, b, c, d, s0, s1, p); 
-  Um2: mux4 port map (e, f, g, h, s0, s1, q);
-  Um3: mux2 port map (p, q, s2, z);
+  Umux1: mux4 port map (a, b, c, d, s0, s1, p); 
+  Umux2: mux4 port map (e, f, g, h, s0, s1, q);
+  Umux3: mux2 port map (p, q, s2, z);
 
   -- implemente usando dois mux4 e um mux2
 
