@@ -1,9 +1,9 @@
 v 3
-file . "tb_estrut.vhd" "20180904055042.000" "20180904025052.681":
+file . "tb_estrut.vhd" "20180904060938.000" "20180904031002.358":
   entity tb_estrut at 8( 430) + 0 on 55;
   architecture tb of tb_estrut at 14( 532) + 0 on 56;
   configuration cfg_tb at 402( 14892) + 0 on 57;
-file . "aux.vhd" "20180903192928.000" "20180904025052.232":
+file . "aux.vhd" "20180903192928.000" "20180904031001.898":
   entity inv at 16( 654) + 0 on 13;
   architecture comport of inv at 23( 741) + 0 on 14;
   entity and2 at 32( 1062) + 0 on 15;
@@ -26,10 +26,10 @@ file . "aux.vhd" "20180903192928.000" "20180904025052.232":
   architecture comport of xor2 at 178( 4562) + 0 on 32;
   entity xor3 at 187( 4886) + 0 on 33;
   architecture comport of xor3 at 195( 4984) + 0 on 34;
-file . "packageWires.vhd" "20150728174508.000" "20180904025052.114":
+file . "packageWires.vhd" "20150728174508.000" "20180904031001.791":
   package p_wires at 5( 213) + 0 on 11 body;
   package body p_wires at 25( 938) + 0 on 12;
-file . "estrut.vhd" "20180904055019.000" "20180904025052.405":
+file . "estrut.vhd" "20180904060955.000" "20180904031002.073":
   entity mux2 at 9( 371) + 0 on 35;
   architecture estrut of mux2 at 17( 592) + 0 on 36;
   entity mux4 at 48( 1385) + 0 on 37;
@@ -46,7 +46,7 @@ file . "estrut.vhd" "20180904055019.000" "20180904025052.405":
   architecture estrut of demux8 at 223( 5735) + 0 on 48;
   entity decod2 at 264( 6936) + 0 on 49;
   architecture estrut of decod2 at 271( 7034) + 0 on 50;
-  entity decod4 at 296( 7582) + 0 on 51;
-  architecture estrut of decod4 at 303( 7688) + 0 on 52;
-  entity decod8 at 337( 8510) + 0 on 53;
-  architecture estrut of decod8 at 344( 8632) + 0 on 54;
+  entity decod4 at 296( 7589) + 0 on 51;
+  architecture estrut of decod4 at 303( 7695) + 0 on 52;
+  entity decod8 at 337( 8517) + 0 on 53;
+  architecture estrut of decod8 at 344( 8639) + 0 on 54;

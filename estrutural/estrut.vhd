@@ -282,9 +282,9 @@ signal r : bit;
 
 begin
 
-    Ui:  inv  port map(r, z);
-    Ua0: and2 port map(s, s, r);
-    Ua1: and2 port map(s, s, w);
+    Uinv0:  inv  port map(s, r);
+    Uand0: and2 port map(r, r, z);
+    Uand1: and2 port map(s, s, w);
 
   -- implemente com portas logicas
 
