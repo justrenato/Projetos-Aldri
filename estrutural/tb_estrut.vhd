@@ -197,13 +197,13 @@ architecture TB of tb_estrut is
   constant test_vectors_8 : test_array_8 := (
     --k,   a,          s,   mx,   dm,         dc
     ('1',b"00000001",b"000",'0',b"00000001",b"00000001"),
-    ('1',b"00000010",b"001",'1',b"00000010",b"00000001"),
-    ('1',b"00000100",b"010",'0',b"00000100",b"00000010"),
-    ('1',b"00001000",b"011",'1',b"00001000",b"00000010"),
-    ('1',b"00010000",b"100",'0',b"00010000",b"00000100"),
-    ('1',b"00100000",b"101",'1',b"00100000",b"00000100"),
-    ('1',b"01000000",b"110",'1',b"01000000",b"00000100"),
-    ('1',b"10000000",b"111",'1',b"10000000",b"00000100"),
+    ('1',b"00000010",b"001",'1',b"00000010",b"00000010"),
+    ('1',b"00000100",b"010",'0',b"00000100",b"00000100"),
+    ('1',b"00001000",b"011",'1',b"00001000",b"00001000"),
+    ('1',b"00010000",b"100",'0',b"00010000",b"00010000"),
+    ('1',b"00100000",b"101",'1',b"00100000",b"00100000"),
+    ('1',b"01000000",b"110",'1',b"01000000",b"01000000"),
+    ('1',b"10000000",b"111",'1',b"10000000",b"10000000"),
 
     -- adicionar vetores de teste aqui
     --
@@ -328,21 +328,21 @@ begin
       --------------------------------------------------------------
       -- descomente estes para testar os demultiplexadores ---------
       --------------------------------------------------------------
---        assert sDEMUX4 = esperadaDEMUX_4
---          report LF & "demux4: saida errada sel="& BV2STR(s(1 downto 0)) &
---          " entr="& B2STR(inp) &
---          " saiu=" & BV2STR(sDEMUX4) &
---          " esperada=" & BV2STR(esperadaDEMUX_4)
---          severity error;
+        assert sDEMUX4 = esperadaDEMUX_4
+          report LF & "demux4: saida errada sel="& BV2STR(s(1 downto 0)) &
+          " entr="& B2STR(inp) &
+          " saiu=" & BV2STR(sDEMUX4) &
+          " esperada=" & BV2STR(esperadaDEMUX_4)
+          severity error;
 
       -------------------------------------------------------------
       -- descomente estes para testar os demultiplexadores --------
       -------------------------------------------------------------
---        assert sDECOD4 = esperadaDECOD_4
---          report LF & "decod4: saida errada sel="& BV2STR(s(1 downto 0)) &
---         " saiu=" & BV2STR(sDECOD4) &
---          " esperada=" & BV2STR(esperadaDECOD_4)
---          severity error;
+        assert sDECOD4 = esperadaDECOD_4
+          report LF & "decod4: saida errada sel="& BV2STR(s(1 downto 0)) &
+         " saiu=" & BV2STR(sDECOD4) &
+          " esperada=" & BV2STR(esperadaDECOD_4)
+          severity error;
 
     end loop; -- QUATRO entradas-----------------------------------
 
@@ -375,19 +375,19 @@ begin
       --------------------------------------------------------------
       -- descomente estes para testar os demultiplexadores ---------
       --------------------------------------------------------------
---        assert sDEMUX8 = esperadaDEMUX_8
---          report LF & "demux8: saida errada sel=" & BV2STR(s) &
---          " entr="& B2STR(inp) &
---          " saiu=" & BV2STR(sDEMUX8) & " esperada=" & BV2STR(esperadaDEMUX_8)
---         severity error;
+        assert sDEMUX8 = esperadaDEMUX_8
+          report LF & "demux8: saida errada sel=" & BV2STR(s) &
+          " entr="& B2STR(inp) &
+          " saiu=" & BV2STR(sDEMUX8) & " esperada=" & BV2STR(esperadaDEMUX_8)
+         severity error;
 
       -------------------------------------------------------------
       -- descomente estes para testar os demultiplexadores --------
       -------------------------------------------------------------
---        assert sDECOD8 = esperadaDECOD_8
---          report LF & "decod8: saida errada sel=" & BV2STR(s) &
---          " saiu=" & BV2STR(sDECOD8) & " esperada=" & BV2STR(esperadaDECOD_8)
---          severity error;
+        assert sDECOD8 = esperadaDECOD_8
+          report LF & "decod8: saida errada sel=" & BV2STR(s) &
+          " saiu=" & BV2STR(sDECOD8) & " esperada=" & BV2STR(esperadaDECOD_8)
+          severity error;
           
     end loop;  -- OITO entradas ----------------------------------
     

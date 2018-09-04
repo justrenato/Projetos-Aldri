@@ -1,0 +1,59 @@
+[*]
+[*] GTKWave Analyzer v3.3.37 (w)1999-2012 BSI
+[*] Wed Aug 22 18:32:28 2018
+[*]
+[dumpfile] "/home/roberto/digital/adm/labs/somadores/v_somador.vcd"
+[dumpfile_mtime] "Wed Aug 22 18:27:22 2018"
+[dumpfile_size] 88258
+[savefile] "/home/roberto/digital/adm/labs/somadores/add.sav"
+[timestart] 5669800
+[size] 1114 478
+[pos] -1 -1
+*-17.411135 6000000 1000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 210
+[signals_width] 165
+[sst_expanded] 1
+[sst_vpaned_height] 112
+@22
+inpa[15:0]
+inpb[15:0]
+@28
+addsub
+@200
+-
+-  resp esperada
+@22
+[color] 7
+esp_res[15:0]
+@28
+[color] 7
+esp_vai
+@200
+-
+-  cadeia
+@22
+[color] 3
+rescad[15:0]
+@28
+[color] 3
+vaicad
+@200
+-
+-  adiant 4 em 4
+@22
+[color] 2
+resad4[15:0]
+@28
+[color] 2
+vaiad4
+@200
+-
+-  adiant 16 em 16
+@22
+[color] 1
+resad16[15:0]
+@28
+[color] 1
+vaiad16
+[pattern_trace] 1
+[pattern_trace] 0
