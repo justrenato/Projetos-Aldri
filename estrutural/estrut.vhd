@@ -208,8 +208,6 @@ begin
   -- implemente com um demux2 e circuito(s) visto(s) nesta aula
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- Inicio demux8(a,s0,s1,s2,p,q,r,s,t,u,v,w)
@@ -236,31 +234,29 @@ architecture estrut of demux8 is
     port(A,S : in bit; Z,W : out bit);
   end component demux2;
 
-signal b,c,d,e,f,g,h,i : bit;
+signal b,c,d,e,f,g,h,i,j : bit;
 
 begin
 
-    Ui1:  inv     port map(s1, d);
-    Ui2:  inv     port map(s2, i);
-    Ud:   demux2  port map(a, s0, b, c);
-    Ua0:  and2    port map(b, s1, e);
-    Ua1:  and2    port map(b, d, f);
-    Ua2:  and2    port map(c, s1, g);
-    Ua3:  and2    port map(c, d, h);
-    Ua4:  and2    port map(s2, e, p);
-    Ua5:  and2    port map( e, i, q);
-    Ua6:  and2    port map( f, s2, r);
-    Ua7:  and2    port map( f, i, s);
-    Ua8:  and2    port map( g, s2, t);
-    Ua9:  and2    port map( g, i, u);
-    Ua10: and2    port map( h, s2, v);
-    Ua11: and2    port map( h, i, w);
+    Uinv1:  inv     port map(s0, d);
+    Uinv2:  inv     port map(s1, c);
+    Uinv3:  inv     port map(s2, b);
+    Uand0:  and2    port map(a, b, e);
+    Uand1:  and2    port map(a, s2, h);
+    Uand2:  and2    port map(e, c, f);
+    Uand3:  and2    port map(e, s1, g);
+    Uand4:  and2    port map(c, h, i);
+    Uand5:  and2    port map(s1, h, j);
+    Udem0:  demux2  port map(f, s0, p, q);
+    Uand6:  and2    port map(g, d, r);
+    Uand7:  and2    port map(g, s0, s);
+    Uand8:  and2    port map(i, d, t);
+    Uand9:  and2    port map(i, s0, u);
+    Uand10: and2    port map(j, d, v);
+    Uand11: and2    port map(j, s0, w);
   -- implemente com um demux2 e circuito(s) visto(s) nesta aula
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- Inicio decod2(s,z,w)
@@ -293,8 +289,6 @@ begin
   -- implemente com portas logicas
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- Inicio decod4(s0,s1,x,y,z,w)
@@ -336,8 +330,6 @@ begin
 
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 -- Inicio decod8(s0,s1,s2,p,q,r,s,t,u,v,w)
