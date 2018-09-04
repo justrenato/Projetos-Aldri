@@ -4,7 +4,7 @@
 
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- mux2(a,b,s,z)
+-- Inicio mux2(a,b,s,z)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -43,7 +43,7 @@ architecture estrut of mux2 is
 end architecture estrut;
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- mux4(a,b,c,d,s0,s1,z)
+-- Inicio mux4(a,b,c,d,s0,s1,z)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -71,7 +71,7 @@ begin
 end architecture estrut;
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- mux8(a,b,c,d,e,f,g,h,s0,s1,s2,z)
+-- Inicio mux8(a,b,c,d,e,f,g,h,s0,s1,s2,z)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -102,12 +102,9 @@ begin
   -- implemente usando dois mux4 e um mux2
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- mux8vet(entr(7downto0),sel(2downto1),z)
+-- Inicio mux8vet(entr(7downto0),sel(2downto1),z)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -131,20 +128,16 @@ architecture estrut of mux8vet is
   
 begin
   
-  Um1: mux4 port map (entr(7),entr(6),entr(5),entr(4),sel(2),sel(1) , p); 
-  Um2: mux4 port map (entr(3),entr(2),entr(1),entr(0),sel(2),sel(1) , q);
-  Um3: mux2 port map (p, q, sel(0), z);
+  Umux1: mux4 port map (entr(0),entr(1),entr(2),entr(3),sel(0),sel(1) , p); 
+  Umux2: mux4 port map (entr(4),entr(5),entr(6),entr(7),sel(0),sel(1) , q);
+  Umux3: mux2 port map (p, q, sel(2), z);
 
   -- implemente usando dois mux4 e um mux2
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- demux2(a,s,z,w)
+-- Inicio demux2(a,s,z,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -168,18 +161,16 @@ signal r : bit;
 
 begin
 
-    Ui:  inv port map(s, r);
-    Ua0: and2 port map(a, r, z);
-    Ua1: and2 port map(a, s, w);
+    Uinv0:  inv port map(s, r);
+    Uand0: and2 port map(a, r, z);
+    Uand1: and2 port map(a, s, w);
 
   -- implemente com portas logicas
 
 end architecture estrut;
--- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- demux4(a,s0,s1,x,y,z,w)
+-- Inicio demux4(a,s0,s1,x,y,z,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -203,16 +194,17 @@ architecture estrut of demux4 is
     port(A,S : in bit; Z,W : out bit);
   end component demux2;
 
-signal p,q,r : bit;
+signal o,p,q,r : bit;
 
 begin
   
-    Ui:  inv   port map(s0, r);
-    Ud: demux2 port map (a, s1, p, q);
-    Ua0: and2  port map(p, r, x);
-    Ua1: and2  port map(p, s0, y);
-    Ua2: and2  port map(q, r, z);
-    Ua3: and2  port map(q, s0, w);
+    Uinv0:  inv   port map(s0, q);
+    Uinv1:  inv   port map(s1, r);
+    Uand0: and2  port map(a, r, o);
+    Udem: demux2 port map (o, s0, x, y);
+    Uand1: and2  port map(a, s1, p);
+    Uand2: and2  port map(p, q, z);
+    Uand3: and2  port map(p, s0, w);
   -- implemente com um demux2 e circuito(s) visto(s) nesta aula
 
 end architecture estrut;
@@ -220,7 +212,7 @@ end architecture estrut;
 
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- demux8(a,s0,s1,s2,p,q,r,s,t,u,v,w)
+-- Inicio demux8(a,s0,s1,s2,p,q,r,s,t,u,v,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -271,7 +263,7 @@ end architecture estrut;
 
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- decod2(s,z,w)
+-- Inicio decod2(s,z,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -305,7 +297,7 @@ end architecture estrut;
 
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- decod4(s0,s1,x,y,z,w)
+-- Inicio decod4(s0,s1,x,y,z,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
@@ -348,7 +340,7 @@ end architecture estrut;
 
 
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
--- decod8(s0,s1,s2,p,q,r,s,t,u,v,w)
+-- Inicio decod8(s0,s1,s2,p,q,r,s,t,u,v,w)
 -- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 use work.p_wires.all;
 
