@@ -314,17 +314,19 @@ architecture estrut of decod4 is
     port(S : in bit; Z,W : out bit);
   end component decod2;  
 
-signal a,b,c,d,e : bit;
+signal a,b,c,d,e,f,g : bit;
 
 begin
 
     Ui:  inv    port map(s1, a);
-    Ud0: decod2 port map(s0, b, c);
-    Ud1: decod2 port map(s0, d, e);
-    Ua0: and2 port map(b, a, x);
-    Ua1: and2 port map(c, a, y);
-    Ua2: and2 port map(d, s1, z);
-    Ua3: and2 port map(e, s1, w);
+    Uand0: and2 port map(s0, a, b);
+    Uand1: and2 port map(s0, s1, c);
+    Udec0: decod2 port map(b, f, g);
+    Udec1: decod2 port map(c, d, e);
+    Uand4: and2 port map(f, a, x);
+    Uand5: and2 port map(g, a, y);
+    Uand2: and2 port map(s1, d, z);
+    Uand3: and2 port map(s1, e, w);
 
   -- implemente com decod2 e circuito(s) visto(s) nesta aula
 
