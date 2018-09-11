@@ -1,8 +1,22 @@
 v 3
-file . "tb_somador.vhd" "20180824011149.000" "20180904142651.730":
-  entity tb_somador at 8( 446) + 0 on 41;
-  architecture tb of tb_somador at 15( 550) + 0 on 42;
-  configuration cfg_tb at 178( 6585) + 0 on 43;
+file . "somador.vhd" "20180822185401.000" "20180904152714.519":
+  entity addbit at 9( 421) + 0 on 44;
+  architecture estrutural of addbit at 16( 630) + 0 on 45;
+  entity addercadeia at 47( 1714) + 0 on 46;
+  architecture addercadeia of addercadeia at 57( 1929) + 0 on 47;
+  entity adianta4 at 97( 3683) + 0 on 48;
+  architecture adianta4 of adianta4 at 106( 3931) + 0 on 49;
+  entity adderadianta4 at 145( 5562) + 0 on 50;
+  architecture adderadianta4 of adderadianta4 at 155( 5781) + 0 on 51;
+  entity adianta16 at 217( 8110) + 0 on 52;
+  architecture adianta16 of adianta16 at 226( 8376) + 0 on 53;
+  entity adderadianta16 at 274( 10316) + 0 on 54;
+  architecture adderadianta16 of adderadianta16 at 285( 10651) + 0 on 55;
+  entity addercsa32 at 352( 13145) + 0 on 56;
+  architecture functional of addercsa32 at 401( 14643) + 0 on 57;
+file . "packageWires.vhd" "20180824011253.000" "20180904142651.287":
+  package p_wires at 5( 229) + 0 on 11 body;
+  package body p_wires at 47( 1944) + 0 on 12;
 file . "aux.vhd" "20180822190147.000" "20180904142651.355":
   entity inv at 22( 952) + 0 on 13;
   architecture comport of inv at 30( 1116) + 0 on 14;
@@ -18,21 +32,7 @@ file . "aux.vhd" "20180822190147.000" "20180904142651.355":
   architecture comport of xor2 at 124( 3821) + 0 on 24;
   entity xor3 at 133( 4188) + 0 on 25;
   architecture comport of xor3 at 141( 4363) + 0 on 26;
-file . "packageWires.vhd" "20180824011253.000" "20180904142651.287":
-  package p_wires at 5( 229) + 0 on 11 body;
-  package body p_wires at 47( 1944) + 0 on 12;
-file . "somador.vhd" "20180822185401.000" "20180904142651.444":
-  entity addbit at 9( 421) + 0 on 27;
-  architecture estrutural of addbit at 16( 630) + 0 on 28;
-  entity addercadeia at 47( 1714) + 0 on 29;
-  architecture addercadeia of addercadeia at 57( 1929) + 0 on 30;
-  entity adianta4 at 97( 3683) + 0 on 31;
-  architecture adianta4 of adianta4 at 106( 3931) + 0 on 32;
-  entity adderadianta4 at 145( 5562) + 0 on 33;
-  architecture adderadianta4 of adderadianta4 at 155( 5781) + 0 on 34;
-  entity adianta16 at 217( 8110) + 0 on 35;
-  architecture adianta16 of adianta16 at 226( 8376) + 0 on 36;
-  entity adderadianta16 at 274( 10316) + 0 on 37;
-  architecture adderadianta16 of adderadianta16 at 285( 10651) + 0 on 38;
-  entity addercsa32 at 352( 13145) + 0 on 39;
-  architecture functional of addercsa32 at 401( 14643) + 0 on 40;
+file . "tb_somador.vhd" "20180824011149.000" "20180904142651.730":
+  entity tb_somador at 8( 446) + 0 on 41;
+  architecture tb of tb_somador at 15( 550) + 0 on 42;
+  configuration cfg_tb at 178( 6585) + 0 on 43;
