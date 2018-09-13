@@ -1,0 +1,72 @@
+[*]
+[*] GTKWave Analyzer v3.3.37 (w)1999-2012 BSI
+[*] Thu Sep  6 14:26:50 2018
+[*]
+[dumpfile] "/home/roberto/digital/adm/labs/processos/v_me.vcd"
+[dumpfile_mtime] "Thu Sep  6 14:24:21 2018"
+[dumpfile_size] 14173
+[savefile] "/home/roberto/digital/adm/labs/processos/v.sav"
+[timestart] 0
+[size] 1104 332
+[pos] 599 -49
+*-22.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 210
+[signals_width] 117
+[sst_expanded] 1
+[sst_vpaned_height] 60
+@28
+reset
+clk
+@200
+-
+-  estado da ME
+@c00024
+[color] 2
+dbg_st[31:0]
+@28
+(0)dbg_st[31:0]
+(1)dbg_st[31:0]
+(2)dbg_st[31:0]
+(3)dbg_st[31:0]
+(4)dbg_st[31:0]
+(5)dbg_st[31:0]
+(6)dbg_st[31:0]
+(7)dbg_st[31:0]
+(8)dbg_st[31:0]
+(9)dbg_st[31:0]
+(10)dbg_st[31:0]
+(11)dbg_st[31:0]
+(12)dbg_st[31:0]
+(13)dbg_st[31:0]
+(14)dbg_st[31:0]
+(15)dbg_st[31:0]
+(16)dbg_st[31:0]
+(17)dbg_st[31:0]
+(18)dbg_st[31:0]
+(19)dbg_st[31:0]
+(20)dbg_st[31:0]
+(21)dbg_st[31:0]
+(22)dbg_st[31:0]
+(23)dbg_st[31:0]
+(24)dbg_st[31:0]
+(25)dbg_st[31:0]
+(26)dbg_st[31:0]
+(27)dbg_st[31:0]
+(28)dbg_st[31:0]
+(29)dbg_st[31:0]
+(30)dbg_st[31:0]
+(31)dbg_st[31:0]
+@1401200
+-group_end
+@200
+-
+@28
+entr
+@29
+[color] 1
+found
+@28
+[color] 5
+esperada
+[pattern_trace] 1
+[pattern_trace] 0
