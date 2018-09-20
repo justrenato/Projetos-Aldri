@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave Analyzer v3.3.37 (w)1999-2012 BSI
+[*] Thu Sep 13 01:26:07 2018
+[*]
+[dumpfile] "/home/roberto/digital/adm/labs/maqEst/v_reduz.vcd"
+[dumpfile_mtime] "Thu Sep 13 01:21:58 2018"
+[dumpfile_size] 39086
+[savefile] "/home/roberto/digital/adm/labs/maqEst/v.sav"
+[timestart] 48760000
+[size] 1240 544
+[pos] -1 -1
+*-21.000000 54000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 210
+[signals_width] 170
+[sst_expanded] 1
+[sst_vpaned_height] 136
+@28
+rst
+clk
+@200
+-
+-   reduz
+@22
+u_reduz.valor[31:0]
+@200
+-
+@24
+[color] 5
+u_reduz.dbg_st[31:0]
+@28
+u_reduz.sync
+u_reduz.ld_op
+@24
+u_reduz.oper[2:0]
+@200
+-
+@28
+[color] 2
+u_reduz.init_b
+[color] 2
+u_reduz.sel_init[2:0]
+[color] 2
+u_reduz.ld_b
+@22
+[color] 2
+u_reduz.inp_red[31:0]
+@200
+-
+@22
+u_reduz.alfa[31:0]
+[color] 1
+u_reduz.beta[31:0]
+[color] 7
+u_reduz.delta[31:0]
+@200
+-
+-   saida
+@28
+u_reduz.sel
+@22
+u_reduz.saida[31:0]
+@23
+[color] 1
+esp_res[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
